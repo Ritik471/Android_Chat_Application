@@ -1,0 +1,8 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChatApplication" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+    <style name="Theme.ChatApplication" parent="Base.Theme.ChatApplication" />
+</resources>

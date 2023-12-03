@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_color"
+        android:padding="10dp"
+        android:id="@+id/Main_Toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/Search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_search_24"
+            app:tint="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </ImageButton>
+      
+    </RelativeLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Main_Toolbar"
+        android:id="@+id/Main_Frame">
+    </FrameLayout>
+    
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/Divider"
+        android:layout_above="@+id/Navigation"
+        app:dividerColor="@color/white">
+
+    </com.google.android.material.divider.MaterialDivider>
+    
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Navigation"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/my_color"
+        app:itemIconSize="25sp"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_navigation_menu"
+        android:backgroundTint="@color/black">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black">
+
+   <ImageView
+       android:layout_width="160dp"
+       android:layout_height="160dp"
+       android:background="@drawable/circularbg"
+       android:backgroundTint="@color/my_color"
+       android:src="@drawable/baseline_person3"
+       android:scaleType="centerCrop"
+       android:layout_marginBottom="40dp"
+       android:id="@+id/profile_image_view">
+
+   </ImageView>
+
+    <EditText
+        android:id="@+id/profile_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/roundedborder"
+        android:elevation="5dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:letterSpacing="0.05"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/roundedborder"
+        android:elevation="5dp"
+        android:hint="Phone"
+        android:inputType="number"
+        android:letterSpacing="0.05"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:enabled="false"
+        tools:ignore="HardcodedText,TextFields">
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_update_button"
+            android:layout_margin="10dp"
+            android:background="@drawable/loginbtn"
+            app:backgroundTint="@null"
+            android:text="Update Profile"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+        <ProgressBar
+            android:id="@+id/profile_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progressbar"
+            android:progress="0" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/logout_btn">
+
+    </TextView>
+
+
+</LinearLayout>

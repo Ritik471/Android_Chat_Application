@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_color"
+        android:padding="10dp"
+        android:id="@+id/Toolbar1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search User"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/back_button">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Toolbar1"
+        android:layout_margin="10dp"
+        android:id="@+id/Search_user_Layout">
+
+        <EditText
+            android:id="@+id/SearchBar_NameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/Search_user_button"
+            android:background="@drawable/roundedborder"
+            android:backgroundTint="@color/white"
+            android:elevation="4dp"
+            android:hint="Username"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="@color/black">
+
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/Search_user_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_search_24"
+            app:tint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+
+    </RelativeLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Search_user_Layout"
+        android:id="@+id/Search_List">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
